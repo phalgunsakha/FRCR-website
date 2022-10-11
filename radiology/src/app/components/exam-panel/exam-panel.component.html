@@ -1,0 +1,67 @@
+<div class="container-fluid border-top border-2 border-bottom border-primary">
+    <div class="row">
+        <div class="col-md-12">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSopportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupoortedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <button class=" ms-1 btn btn-primary" type="button">Finish</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <button class=" ms-1 btn btn-primary" (click)="previousQuestion()" type="button">Previous</button>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <button class=" ms-1 btn btn-primary"  (click)="nextQuestion()" type="button">Next</button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt-3">
+    <div class="row bg-primary">
+        <div class="col-md-8 ">
+            <div>
+                <p>{{currentQuestion}}</p>
+            </div>
+
+        </div>
+        <div class="col-md-3">
+            <p>Answers</p>
+        </div>
+    </div>
+    <div class="row justify-content-between">
+        <div class="col-md-2 m-3"> 
+            <img  [src]="URLS[currentQuestion]" style="max-width: 100%;" alt="image">
+        </div>
+        <div class="col-md-4">
+            <div>
+                <i class="fa-solid fa-flag"></i>
+                <p>Normal/Abnormal</p>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Normal or Abnormal</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item">Select Normal or Abnormal</a>
+                        <a class="dropdown-item">Normal</a>
+                        <a class="dropdown-item">Abnormal</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
